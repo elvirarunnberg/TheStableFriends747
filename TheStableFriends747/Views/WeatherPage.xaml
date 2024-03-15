@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheStableFriends747.Views.WeatherPage"
+             Title="WeatherPage">
+    <VerticalStackLayout>
+
+        <Image Source ="background.jpg"
+        HeightRequest="300"/>
+
+        <Label
+            Text="Högsta temperaturen: "
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
+        <Label 
+            x:Name="Maxtemp"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label
+            Text="Lägsta temperaturen: "
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
+        <Label 
+            x:Name="Mintemp"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label
+            Text="Känns som: "
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
+        <Label 
+            x:Name="Feelslike"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button
+             Text="Uppdatera vädret"
+             HorizontalOptions="Center"
+             Clicked="OnClickedGetWeather"
+             BackgroundColor="DarkKhaki"
+             BorderColor="Black"
+             TextColor="Black"
+             />
+
+    </VerticalStackLayout>
+</ContentPage>

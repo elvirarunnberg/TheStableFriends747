@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheStableFriends747.Views.BullentinBoardPage"
+             Title="BullentinBoardPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image Source="{Binding Loggo.HeaderImageSource}"
+        HeightRequest="250"></Image>
+
+            <Button
+                Text="Lägg till anteckning"
+                Clicked="OnClickedGoMakeNewBullentinNotePage"
+                BackgroundColor="DarkKhaki"
+                BorderColor="Black"
+                TextColor="Black"
+                WidthRequest="300"
+            
+                />
+
+
+
+            <ListView x:Name="Bullentins" ItemsSource="{Binding Bullentinboards}" ItemSelected="OnListViewNoteSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10"
+                      RowDefinitions="Auto, *"
+                      ColumnDefinitions="200, *"
+                      ColumnSpacing="20">
+                                <Image Grid.RowSpan="2"
+                           Source="{Binding ImageSource}"
+                           HeightRequest="200"></Image>
+                                <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Start">
+                                    <Label Text="{Binding Message}" FontSize="20"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
